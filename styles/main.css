@@ -1,0 +1,23 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+    background: #000066;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    line-height: 1.5em
+    }
+h1 {
+    font-family: 'Tahoma, Arial', sans-serif;
+    }
+a {
+  color: #ffff00;
+  }
+.teamCharts {
+  max-width: 900px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Statistical Analysis of the Last 10 Stanley Cup Champions</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<div id="container">
+  <h1> Statistical Analysis of the Last 10 Stanley Cup Champions </h1>
+  <h2> By Brendan Farrell </h2>
+
+    <div id="teamChart1" class="teamCharts"></div>
+    <p class="explanation">
+       This chart shows the regular season results of every Stanley Cup champion since 2010. Every win counts as two points and any loss in overtime or shootout counts as one point. It should be noted that the 2013 Blackhawks had such low point totals because of a lockout that shortened the 2012-13 season to just 48 games instead of the usual 82. <br> <a href="www.nhl.com/standings"> Source </a>
+    </p>
+    <div id="teamChart2" class="teamCharts"></div>
+    <p class="highcharts-description">
+    Bar chart showing the number of goals scored and allowed by each champion during the regular season.
+    </p>
+    <div id="teamChart3" class="teamCharts"></div>
+    <p class="highcharts-description">
+        This chart shows the save percentages each team had at both five-on-five and at all situations, which would include cases like power plays, penalty kills, four-on-four play, etc. 
+    </p>
+    <div id="teamChart4" class="teamCharts"></div>
+    <p class="highcharts-description">
+        Corsi-For Percentage measures the percentage of shot attempts a team takes at five-on-five. This includes shots on goal, blocked shots and missed shots. For example, if Team A has eight shot attempts and Team B has two shot attempts, then Team A's Corsi-For percentage is 80%.
+    </p>
+    <div id="teamChart5" class="teamCharts"></div>
+    <p class="highcharts-description">
+      Expected-Goals-For Percentage (xGF%) measures the quality of shots that a team produces and gives up. An xGF% above 50% suggests that a team is producing more dangerous chances and is more likely to score more goals than the other team. Some people prefer xGF% over CF% because it accounts for quality while CF% is just shot attempts. </p>
+    <div id="teamChart6" class="teamCharts"></div>
+
+
+</div>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/themes/dark-unica.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
