@@ -10,32 +10,472 @@
 <div id="container">
   <h1> Statistical Analysis of the Last 10 Stanley Cup Champions </h1>
   <h2> By Brendan Farrell </h2>
-
+    <div id="chart1">
     <div id="teamChart1" class="teamCharts"></div>
     <p class="explanation">
-       This chart shows the regular season results of every Stanley Cup champion since 2010. Every win counts as two points and any loss in overtime or shootout counts as one point. It should be noted that the 2013 Blackhawks had such low point totals because of a lockout that shortened the 2012-13 season to just 48 games instead of the usual 82. <br> <a href="www.nhl.com/standings"> Source </a>
+       This chart shows the regular season results of every Stanley Cup champion since 2010. Every win counts as two points and any loss in overtime or shootout counts as one point. It should be noted that the 2013 Blackhawks had such low point totals because of a lockout that shortened the 2012-13 season to just 48 games instead of the usual 82.
     </p>
+    <button id="previous1" onclick="goBack1()">Previous</button>
+    <button id="button1" onclick="chartChange1()">Next</button>
+    </div>
+
+    <div id="chart2">
     <div id="teamChart2" class="teamCharts"></div>
     <p class="highcharts-description">
     Bar chart showing the number of goals scored and allowed by each champion during the regular season.
     </p>
+    <button id="previous2" onclick="goBack6()">Previous</button>
+    <button id="button2" onclick="chartChange2()">Next</button>
+    </div>
+
+    <div id="chart3">
     <div id="teamChart3" class="teamCharts"></div>
     <p class="highcharts-description">
-        This chart shows the save percentages each team had at both five-on-five and at all situations, which would include cases like power plays, penalty kills, four-on-four play, etc. 
+        This chart shows the save percentages each team had at both five-on-five and at all situations, which would include cases like power plays, penalty kills, four-on-four play, etc.
     </p>
+    <button id="previous3" onclick="goBack5()">Previous</button>
+    <button id="button3" onclick="chartChange3()">Next</button>
+    </div>
+
+    <div id="chart4">
     <div id="teamChart4" class="teamCharts"></div>
     <p class="highcharts-description">
         Corsi-For Percentage measures the percentage of shot attempts a team takes at five-on-five. This includes shots on goal, blocked shots and missed shots. For example, if Team A has eight shot attempts and Team B has two shot attempts, then Team A's Corsi-For percentage is 80%.
     </p>
+    <button id="previous4" onclick="goBack4()">Previous</button>
+    <button id="button4" onclick="chartChange4()">Next</button>
+    </div>
+
+
+    <div id="chart5">
     <div id="teamChart5" class="teamCharts"></div>
     <p class="highcharts-description">
       Expected-Goals-For Percentage (xGF%) measures the quality of shots that a team produces and gives up. An xGF% above 50% suggests that a team is producing more dangerous chances and is more likely to score more goals than the other team. Some people prefer xGF% over CF% because it accounts for quality while CF% is just shot attempts. </p>
+    <button id="previous5" onclick="goBack3()">Previous</button>
+    <button id="button5" onclick="chartChange5()">Next</button>
+    </div>
+
+    <div id="chart6">
     <div id="teamChart6" class="teamCharts"></div>
+      <p> This chart shows each team's shooting percentage at both five-on-five and at all situations. </p>
+    <button id="previous6" onclick="goBack2()">Previous</button>
+    <button id="button6"  onclick="chartChange6()">Next</button>
+    </div>
+
+    <p> Below there are pages for every Stanley Cup champion since 2010. Click a button to read more about that season's champion and to look through charts. Click the button again to minimize it. </p>
+
+    <button id="BlackhawksShow" onclick="BlackhawksButton()"> 2009-10</button>
+    <button id="BruinsShow" onclick="BruinsButton()"> 2010-11</button>
+    <button id="KingsShow" onclick = "KingsButton()"> 2011-12 </button>
+    <button id="BlackhawksShow2" onclick = "BlackhawksButton5()"> 2013 </button>
+    <button id="KingsShow2" onclick = "KingsShow2()"> 2013-14 </button>
+    <button id="BlackhawksShow3" onclick = "BlackhawksShow3()"> 2014-15 </button>
+    <button id="PenguinsShow" onclick = "PenguinsButton()"> 2015-16 </button>
+    <button id="PenguinsShow2" onclick = "PenguinsShow2()"> 2016-17 </button>
+    <button id="CapitalsShow" onclick= "CapitalsButton()"> 2017-18 </button>
+    <button id="BluesShow" onclick= "BluesButton()"> 2018-19 </button>
+
+    <div id="Hawks2010" class="ChampsCharts">
+
+    <div id="AllHawksCharts">
+    <div id="10HawksChart1">
+    <div id="10Hawks1" class="HawksCharts1"></div>
+        <p class="highcharts-description">
+            This chart shows the goals and assists scored in the regular season by each member of the 2009-10 Blackhawks who played in at least 20 games. Patrick Kane led the team in goals, assists and points, while Duncan Keith led the team's defensemen in those categories.
+        </p>
+        <button id="HawksButton1" onclick="BlackhawksButton2()"> Next </button>
+    </div>
+    <div id="10HawksChart2">
+    <div id="10Hawks2" class="HawksCharts1"></div>
+        <p class="highcharts-description">
+            This chart shows what the Blackhawks' path to the Stanley Cup looked like. This chart shows the margin of victory for every game the Blackhawks played in the postseason. If the margin is negative, then the Blackhawks lost that game. If it is positive, that is a Chicago win.
+    </p>
+    <button id="HawksButton2" onclick="BlackhawksButton3()"> Next </button>
+  </div>
+    <div id="10HawksChart3">
+    <div id="10Hawks3" class="HawksCharts1"></div>
+    <p class="highcharts-description">
+        This is a bar chart showing where the Blackhawks ranked in the league in several categories. They were phenomenal in controlling play, generating dangerous chances offensively and preventing the opposition from doing so. That can be seen in the low number of goals that they gave up and great CF% and xGF% numbers. Overall, this Blackhawks team was clearly one of the best teams in the league entering the playoffs.
+    </p>
+    <button id="HawksButton3" onclick="BlackhawksButton4()"> Next </button>
+  </div>
+  </div>
+  <div id="Hawks2010Text" class="ChampsChartsText">
+<h2> 2009-10 Chicago Blackhawks </h2>
+<p> The Chicago Blackhawks came into the 2009-10 season on an upward trajectory. They hit the 100-point mark the previous season for the first time since 1993. This team had star forwards Patrick Kane and Jonathan Toews hitting their primes and plenty of depth. </p>
+<p> In the offseason, general manager Stan Bowman, replacing former GM Dale Tallon after he was demoted from the position, signed free-agent forward Marian Hossa to a 12-year contract worth nearly $63 million. Hossa posted 51 points in 57 games in his first of eight seasons in Chicago. He was one of seven players on the team with at least 40 points and one of six with at least 20 goals. </p>
+<p> The duo of Kane and Toews, however, was arguably one of the best in the league, and that would continue through the decade. Kane led the team with 30 goals and 88 points in 2009-10, and Toews emerged as one of the league's best two-way centers. </p>
+<p> The biggest question about the team heading into the season was in goal with Cristobal Huet as the starter. However, undrafted goalie Antti Niemi emerged as the better option towards the end of the season, and he got the nod as the team's starting goaltender for the playoffs. </p>
+<p> Though the Blackhawks had what is easily the weakest goaltending of any Stanley Cup champion in the 2010s, they were still one of the best teams in the league. Chicago finished the regular season with a 52-22-8 record. The Blackhawks won the Central Division, and their 112 points were second in the Western Conference, one fewer than the San Jose Sharks. </p>
+<p> The 2010 Blackhawks and the 2012 Kings were the only teams this decade to win the Stanley Cup without playing in a Game 7 in any series. They trailed Nashville 2-1 after three games, but outscored the Predators 13-7 in the next three games to close out the series. An overtime goal by Hossa in Game 5 sent the series back to Chicago. A first period with seven goals also featured the series-winning goal from Toews at the end of the period. John Madden scored an empty net goal to finish off the Predators. </p>
+<p> Chicago met the third-seeded Vancouver Canucks in the second round. The two teams split the first two games in Chicago, but the Blackhawks outscored Vancouver 12-6 to take a commanding 3-1 series lead. The Canucks staved off elimination in Game 5 with a 4-1 win, but Chicago blew out the Canucks 5-1 in Game 6 to move on to the Western Conference Finals. </p>
+<p> The Blackhawks faced the top-seeded San Jose Sharks to determine who would represent the Western Conference in the Stanley Cup Finals. The Blackhawks took both games in San Jose thanks to some spectacular goaltending from Antti Niemi, who saved 64 of 67 shots. Niemi was once again the star in Game 3, as he made 44 saves in a 2-1 overtime win to take a 3-0 lead. The Blackhawks finished off the sweep with four unanswered goals in Game 4 in a 4-2 win. They advanced to the Stanley Cup Finals for the first time since 1992. </p>
+<p> The Philadelphia Flyers, who were the seventh seed in the Eastern Conference, awaited the Blackhawks in the Stanley Cup Finals. Chicago was heavy favorites, and it showed when it won the first two games of the series. But the Flyers responded by winning both games on their home ice to even the series. The Blackhawks jumped out to a 3-0 lead in Game 5 and held on for a 7-4 win to put them a win away from winning the Cup.</p>
+<p> A late equalizer from Philadelphia's Scott Hartnell sent the game into overtime when Patrick Kane scored the series-winning goal. Originally, nobody saw the puck go into the net except Kane, who celebrated while confused teammates looked on. But as the replay showed, the puck went into the net, and the Blackhawks won their first Stanley Cup since 1961 and their fourth in franchise history. </p>
+</div>
+</div>
+
+<div id="Bruins2011" class="ChampsCharts">
+<h2> 2010-11 Boston Bruins </h2>
+<p> The Bruins were still reeling from becoming the third team in NHL history to blow a 3-0 series when they did it against the Philadelphia Flyers in 2010. The team was largely the same as the one that collapsed in the playoffs, with the exception of three new acquisitions: forwards Nathan Horton, Gregory Campbell and Tyler Seguin. </p>
+<p> Boston received Horton and Campbell in a trade by sending defenseman Dennis Wideman to the Florida Panthers along with a first-round pick in 2010 and a third-round pick in 2011. Seguin came to the Bruins as the second-overall pick in the 2010 NHL Entry Draft thanks to the Toronto Maple Leafs sending Boston their first-round pick as a part of the Phil Kessel trade. </p>
+<p> But the true stars of this team were forward Patrice Bergeron, defenseman Zdeno Chara and the goaltending duo of Tim Thomas and Tuukka Rask. Bergeron continued to be one of the league's best two-way forwards, and his 57 points were his most in a season since 2006-07. Defensively, the 6-foot-9 Chara kept opponents at bay in the defensive zone. </p>
+<p> The combination of Thomas and Rask in net was easily one of the best in the league. Thomas had a save percentage of .938 and nine shutouts during the regular season. His efforts won him the Vezina Trophy, the award given to the best goaltender in the league every season. Thomas also won the Conn Smythe Award, which is given to the most valuable player of the postseason. </p>
+<p> The Bruins went 46-25-11 in the regular season, giving them 103 points, first place in the Northeast Division and the third seed in the Eastern Conference. </p>
+<p> Boston faced bitter rival Montreal in the first round of the playoffs. The Bruins dropped the first two games of the series and scored only one goal at home. However, the Bruins took Game 3 in Montreal and tied the series at two in Game 4 after an overtime winner from Horton. They made it three wins in a row with a 2-1 victory in Boston to put Montreal on the brink of elimination. Montreal ended up winning Game 6, setting up Game 7 back in Boston. </p>
+<p> With the score tied at three at the end of regulation, the two teams went to overtime. At 5:43 into the overtime period, Horton tallied his second game-winning overtime goal of the series to advance the Bruins into the second round. </p>
+<p> A rematch with the Flyers awaited the Bruins in the next round. Boston once again took a 3-0 series lead, but this time, the Bruins completed the sweep with a 5-1 win in front of their home fans. Boston outscored Philadelphia 20-7 in the series. </p>
+<p> The matchup with the Tampa Bay Lightning in the Eastern Conference Finals was much closer. The Bruins grabbed a 3-2 series lead after a 3-1 win in Game 5, but the Lightning tied up the series again by winning Game 6 to send the series to Boston for Game 7. There, the Bruins held on for a 1-0 win to advance to the Stanley Cup Final for the first time since 1990. </p>
+<p> The Bruins met the Vancouver Canucks, who won the President's Trophy for having the most points in the regular season, in the Stanley Cup Final. The first two games of the series were low-scoring affairs that ended with Vancouver wins. Boston responded by winning the next two games at home by a combined score of 12-1 to tie the series. Vancouver was on the brink of their first Stanley Cup when it took Game 5 1-0. However, Boston forced another Game 7 when it scored four goals in four minutes and 14 seconds in a 5-2 win. </p>
+<p> Up to this point, the home team had won every game in the series, and Game 7 was in Vancouver. However, it would be the Bruins raising the Stanley Cup by the end of the night with a 4-0 win while Vancouver fans rioted in the city. The Bruins outscored Vancouver 23-8 but still needed seven games to put the Canucks away for good. </p>
+<p> Thomas was the Bruins' best player throughout the playoffs, registering a .941 save percentage in 25 games. Forward David Krejci led the team in points with 23 and goals with 12. </p>
+
+
+<div id="bruinsChart1" class="ChampsCharts">
+<div id="bruins1" class="bruinsCharts"></div>
+    <p class="highcharts-description">
+      This graph shows the scoring distribution for the 2010-11 Bruins out of players who played in at least 20 games. Forward Milan Lucic potted a career-high 30 goals to lead the team in both goals and points. Chara was both the team's best defensive presence and the best offensive defenseman, leading the team's defensemen with 14 goals and 30 assists.
+    </p>
+    <button id="BruinsButton1" onclick="BruinsChange1()"> Next </button>
+  </div>
+
+
+<div id ="bruinsChart2">
+<div id ="bruins2" class="bruinsCharts"></div>
+<p class="highcharts-description">
+  This is a bar graph that shows the Bruins' route to the Stanley Cup, round by round. Positive goal margins mean that the Bruins won that game. Negative goal margins are Bruins losses. Boston needed three Game 7's to win the Stanley Cup, a feat that was tied by the Los Angeles Kings in the same decade. </p>
+<button id="BruinsButton2" onclick="BruinsChange2()"> Next </button>
+</div>
+
+<div id ="bruinsChart3">
+<div id ="bruins3" class="bruinsCharts"></div>
+<p class="highcharts-description">
+This is how the Bruins stacked up against the rest of the league. Despite average play at five-on-five, the Bruins scored at a high rate, and their stellar goaltending won them plenty of games. Boston also struggled with special teams, seeing how both the power play and the penalty kill were in the bottom half of the league. This team, while still a good team, definitely benefitted from its goaltending making them better than they actually were.
+</p>
+<button id="BruinsButton3" onclick="BruinsChange3()"> Next </button>
+</div>
+</div>
+
+
+<div id="Kings2012" class="ChampsCharts">
+<h2> 2011-12 Los Angeles Kings </h2>
+<p> December 12, 2011. </p>
+<p> The Kings were struggling. While they had a strong defense led by Drew Doughty and great goaltending from Jonathan Quick, Los Angeles couldn't score. As a result, they fired head coach Terry Murray. </p>
+<p> Eight days later, the team hired Darryl Sutter to be their new head coach. The Kings continued to struggle, and after a 5-7-2 February, the playoffs seemed out of reach. However, a 12-4-3 run to end the season launched the team up the standings and into the playoffs as the final team in the Western Conference. </p>
+<p> While this Kings team lacked stars, they still had plenty of quality players. Center Anze Kopitar was a gifted player both offensively and defensively, forward Dustin Brown was an energetic power forward that could score and forwards Mike Richards and Justin Williams were experienced veterans that were solid depth pieces. </p>
+<p> Still, the Kings were huge underdogs against the Vancouver Canucks, who won the President's Trophy that year and were favorites to return to the Stanley Cup Finals. However, the Kings shocked the hockey world by eliminating the Canucks in just five games. </p>
+<p> Quick and the Kings' defense allowed just seven goals in the series, while the Canucks' goaltending duo of Roberto Luongo and Cory Schneider faltered. The Kings took both games in Vancouver with a pair of 4-2 wins, and a 1-0 win in Game 3 gave them a 3-0 series lead. Vancouver forced a Game 5, but an overtime winner from LA's Jarret Stoll ended Vancouver's season. </p>
+<p> The Kings were once again underdogs against the second-seeded St. Louis Blues. But LA's stunning run through the playoffs continued with a sweep of the Blues. The Kings scored at least three goals in every game, and only Games 1 and 4 were one-goal games before late, empty-net goals extended the lead to two. </p>
+<p> In the Western Conference Finals, Los Angeles faced the Phoenix Coyotes, the third seed in the Western Conference. Once again, the Kings needed just five games to send their opposition home packing. Quick allowed only seven goals in the series while the offense scored four goals in three of the five games. Forward Dustin Penner scored 17:42 into the overtime period in Game 5 to eliminate Phoenix and advance LA to the Stanley Cup Finals for the second time in franchise history and first since 1993. </p>
+<p> Los Angeles also became the second team in NHL history to knock off the top three seeds in the same postseason. The Kings were also the second eighth-seeded team to make the Stanley Cup Finals. </p>
+<p> It turned out that the Eastern Conference was just as crazy as the Western Conference that year in terms of upsets. The sixth-seeded New Jersey Devisl won the Eastern Conference and were also the lowest-seeded team to ever have home-ice advantage in the Stanley Cup Finals. </p>
+<p> Like the other three series that the Kings played, Los Angeles took a 3-0 series lead, though they needed overtime to win the first two. The Kings pushed the Devils to the brink of elimination with a dominant 4-0 win in Game 3. The Devils outscored the Kings 5-2 in the next two games to stave off elimination. </p>
+<p> The Kings were gifted a golden opportunity in Game 6 when New Jersey's Steve Bernier hit Kings defenseman Rob Scuderi from behind, warranting a five-minute major power play. The Kings scored three times on the power play, and Los Angeles prevailed 6-1 to win the team's first Stanley Cup. The Kings are still the only eight seed to win the Cup. </p>
+<p> Quick won the Conn Smythe Trophy for his play in goal. He posted a save percentage of .946 and allowed 1.41 goals per game with three shutouts. </p>
+
+<div id="12KingsChart1">
+<div id="12Kings1" class="kingsCharts1"></div>
+    <p class="highcharts-description">
+        This chart shows the scoring totals of every Kings player who played in at least 15 games. Anze Kopitar was one of three players who scored more than 20 goals. He also led the team in all three categories. On a Kings team that lacked offense, he was clearly the team's most valuable player along with goaltender Jonathan Quick.
+    </p>
+    <button id="KingsButton1" onclick = "KingsChange1()"> Next </button>
+</div>
+<div id="12KingsChart2">
+<div id="12Kings2" class="kingsCharts1"></div>
+    <p class="highcharts-description">
+        This chart shows the scoring margins of every playoff game the Kings played in 2012. Bars above the x-axis show wins while bars below the x-axis are losses. The Kings only lost four playoff games and were the first team to take a 3-0 lead in every series they played in.
+    </p>
+    <button id="KingsButton2" onclick = "KingsChange2()"> Next </button>
+</div>
+<div id="12KingsChart3">
+<div id="12Kings3" class="kingsCharts1"></div>
+<p class="highcharts-description">
+    This is a bar chart showing where the Kings were ranked in various categories during the 2011-12 regular season. The Kings, while they were very good at controlling play at 5v5 (as evidenced by their strong CF% and xGF% numbers), they struggled to score goals. They were dead last in the league in shooting percentage at five on five at 6.03 percent. Defensively, they suffocated teams and made life easy for Quick, who was one of the best goaltenders in the league that season.
+</p>
+  <button id="KingsButton3" onclick = "KingsChange3()"> Next </button>
+</div>
+</div>
+
+
+<div id="Hawks2013" class="ChampsCharts">
+  <h2> 2013 Chicago Blackhawks </h2>
+  <p> The 2012-13 NHL season became just the 2013 NHL season when a lockout that started on Sept. 14th wasn't resolved until Jan. 6, 2013. The lockout also meant that the regular season was shortened to just 48 games instead of the usual 82. </p>
+  <p> When the season finally started on Jan. 19, the Blackhawks were unstoppable. Chicago won its first six games and 21 of its first 24. The Blackhawks did not lose in regulation until their 25th game of the season, a 6-2 loss to the Colorado Avalanche. Between the first 24 games of the 2013 season and the last six games of the 2011-12 regular season, the Blackhawks had a 30-game point streak, the second-longest streak in NHL history. </p>
+  <p> This Blackhawks team was led by much of the same core that won the 2010 Stanley Cup. Patrick Kane and Jonathan Toews were still the stars of this team. Kane had 55 points in 47 games, the fifth-highest point total in the league. Toews combined his strong defensive play with 48 points of his own. </p>
+  <p> New to this team compared to the 2010 team, however, were goaltender Corey Crawford and forward Brandon Saad. Crawford took over as the starting goalie for the 2010-11 season after Antti Niemi signed in free agency with San Jose. Crawford was solid in his first season before struggling in his second. But in 2013, he had a .926 save percentage, which is still a career best out of the seasons where he has played in at least 30 games. Saad, a rookie in 2013, was fifth on the team in points with 27 in 47 games. The former second-round pick was a valuable young depth piece for a team with a ton of options offensively. </p>
+  <p> Chicago finished the season with a record of 36-7-5 (77 points) and won the President's Trophy for having the most points in the league. The Pittsburgh Penguins were the only other team in the league to exceed 70 points. </p>
+  <p> The Blackhawks met the Minnesota Wild in the first round and were never challenged by Minnesota. An overtime win in Game 1 and an overtime loss in Game 2 were the only two games decided by less than three goals. Chicago outscored Minnesota 17-7 in the series to move onto the second round.</p>
+  <p> It didn't appear that the seventh-seeded Detroit Red Wings would give one of the best teams in the salary cap era much a of a challenge, especially after the Blackhawks took Game 1. However, Detroit pushed Chicago all the way to the brink of extinction after three wins in a row and holding Chicago to just two goals. The Blackhawks won the next two games and an overtime winner from defenseman Brent Seabrook in Game 7 completed the comeback. Chicago became the 25th team in NHL history to win a series after being down 3-1. </p>
+  <p> Chicago then faced the Los Angeles Kings, who had won the Cup the previous season, in a much-anticipated clash of the titans in the Western Conference Finals. The series was only five games, but each game was incredibly close. Three of the five games were decided by one goal while the other two were by two. </p>
+  <p> With the series at 2-1 in favor of Chicago, Blackhawks forward Marian Hossa scored early in the third period to put the Blackhawks up 3-2, a lead that Chicago held onto to take a 3-1 lead in the series. In Game 5, Kane scored two goals in regulation and completed the hat trick in double overtime for a 4-3 win for Chicago to send them back to the Stanley Cup Finals.</p>
+  <p> Chicago faced the Boston Bruins in the Stanley Cup Finals. The first two games were settled in overtime, with each team winning a game. Boston won Game 3 2-0, but the Blackhawks tied the series again with a 6-5 win in overtime. A 3-1 win in Game 6 for Chicago meant that the Stanley Cup would be in the building for Game 6 in Boston. </p>
+  <p> It looked like the series would need a Game 7 with Chicago down by a goal with 90 seconds left in the game. But unheralded depth forwards Bryan Bickell and Dave Bolland delivered with two goals 17 seconds apart to take the lead and shock the Boston crowd. The Blackhawks held on to win their second Stanley Cup in four seasons and the fifth in team history. </p>
+  <div id="13HawksChart1">
+  <div id="13Hawks1" class="HawksCharts2"></div>
+      <p class="highcharts-description">
+          This graph shows the 2013 Blackhawks sorted by the number of points each player produced in the regular season. Despite the 48-game season, Patrick Kane still exceeded 50 points. Duncan Keith led all Chicago defensemen in points and assists while Brent Seabrook led in goals.
+      </p>
+      <button id="HawksButton4" onclick="HawksChange1()"> Next </button>
+  </div>
+  <div id="13HawksChart2">
+  <div id="13Hawks2" class="HawksCharts2"></div>
+      <p class="highcharts-description">
+          This chart shows what the Blackhawks' path to the Stanley Cup looked like. It shows the margin of victory for every game the Blackhawks played in the postseason. Positive goal margins are games that Chicago won. If the margin is negative, then Chicago lost that game.
+  </p>
+  <button id="HawksButton5" onclick="HawksChange2()"> Next </button>
+</div>
+  <div id="13HawksChart3">
+  <div id="13Hawks3" class="HawksCharts2"></div>
+  <p class="highcharts-description">
+      This chart shows how well-rounded the Blackhawks were in several categories relative to the rest of the league. Chicago, minus the struggles on the power play, was a nearly flawless team. It could score at will at five on five, and the defense was just as good. The Blackhawks' goal differential in the regular season was a ridiculous +53, and you can see why. Few teams this decade were as good as this Blackhawks team.
+  </p>
+  <button id="HawksButton6" onclick="HawksChange3()"> Next </button>
+</div>
+</div>
+
+<div id="Kings2014" class = "ChampsCharts">
+  <h2> 2013-14 Los Angeles Kings </h2>
+  <p> The Kings returned much of the same team that won the Stanley Cup in 2012 and lost to the Blackhawks in 2013 in the Western Conference Finals. Anze Kopitar was still one of the best two-way centers in the league, Drew Doughty was arguably one of the best overall defensemen and Jonathan Quick was still unbeatable in the crease. </p>
+  <p> Much like in 2011-12, Los Angeles had a difficult time scoring despite controlling most of the games it played. The Kings scored the fifth-fewest goals in the league and had just four more goals than they did in 2011-12. </p>
+  <p> But the real difference makers were the Kings' defense and goaltending. The Kings were loaded with forwards and defensemen who were strong in their own zone. That combined with Quick resulted in the Kings being the stingiest team in the league defensively, giving up a league-best 2.05 goals per game. </p>
+  <p> The Kings finished the season with a record of 46-28-8 (100 points), which made them the third seed in the Pacific Division in the NHL's new playoff format. </p>
+  <p> And while the 2012 Kings dominated the postseason, the 2014 Kings were completely different. The Kings needed seven games in each of its first three series to advance to the next round. </p>
+  <p> LA faced the rival San Jose Sharks in the first round and were blown out in the first two games of the series in San Jose. An overtime win for the Sharks put the Kings a game away from elimination. </p>
+  <p> A 6-3 win in Game 4 gave the Kings a bit of confidence as the series went back to San Jose. A 3-0 win on the road for the Kings made them feel like the momentum had turned in their favor. Two wins later, the Kings became just the fourth team in NHL history to win a series after trailing 3-0. Los Angeles outscored the Sharks 12-2 in the final three games of the series. After giving up 12 goals in the first two games of the series, Quick only allowed nine over the last five. </p>
+  <p> The Kings faced its other California rival, the Anaheim Ducks, in the second round. The first four games were decided by only one or two goals and won by the visiting team. The Ducks put the Kings on the brink of elimination once again with a narrow 4-3 win in Game 5. But the Kings outscored the Ducks 8-3 over the next two games to survive and move onto the next round. Each of the Kings' eight goals in those two games was scored by a different player. </p>
+  <p> Los Angeles had a rematch with the Chicago Blackhawks in the Western Conference Finals. After dropping the first game, the Kings rallied with three straight wins. A double-overtime loss in Game 5 and 4-3 loss in Game 6 meant that the Kings had to win Game 7 in Chicago in order to stay alive. </p>
+  <p> Goals came in a flurry early in Game 7. The first period alone had five goals, with the Blackhawks holding a 3-2 lead. The Kings tied the game midway through the period, but a power-play goal from Patrick Kane put Chicago back in the lead. Marian Gaborik tied the game at four in the third period to send it to overtime. </p>
+  <p> Kings defenseman Alec Martinez's shot from the point took a deflection in front and made its way past Blackhawks goaltender Corey Crawford for the series-winning goal. The Kings became the first team in NHL history to win three Game 7's in the same postseason as well as the first to play 21 games in order to make it to the Stanley Cup Finals. </p>
+  <p> Against the New York Rangers, the Kings managed to win the first two games of the Stanley Cup Finals despite never holding a lead. Los Angeles came back from two-goal deficits in both games before winning in either overtime or double overtime. The Kings took a commanding 3-0 lead with a 3-0 shutout of the Rangers in New York. The Rangers managed to win Game 4 to send the series back to Los Angeles. </p>
+  <p> In Game 5, the Rangers took a 2-1 lead in the second period on a shorthanded goal from Brian Boyle. Gaborik tied the game for the Kings on the power play to eventually force overtime, then double overtime. Kings forward Tyler Toffoli took a shot on an odd-man rush, and the rebound fell to Martinez's stick. With Rangers goaltender Henrik Lundqvist out of position, Martinez fired it into the empty net to win the game and the Stanley Cup for the Kings. </p>
+
+  <div id="14KingsChart1">
+  <div id="14Kings1" class="KingsCharts2"></div>
+      <p class="highcharts-description">
+          This is the 2013-14 Los Angeles Kings' roster sorted by points. Kopitar led the team in goals, points and assists. That combined with his strong defensive play made him a runner-up for the Frank J. Selke Trophy, which is given to the forward who is the best in his defensive zone. Jeff Carter was the only other player for the Kings to hit the 50-point mark on an offensively challenged Los Angeles team.
+      </p>
+      <button id="KingsButton4" onclick = "KingsChange4()"> Next </button>
+  </div>
+  <div id="14KingsChart2">
+  <div id="14Kings2" class="KingsCharts2"></div>
+      <p class="highcharts-description">
+          This chart shows the game-by-game results for the Kings in the playoffs. Any game with a margin above the x-axis is a win, games below the x-axis are losses. The 3-0 comeback in the first round against San Jose is particularly noteworthy. Notice the differences between the first two games of the series and the last four.
+      </p>
+      <button id="KingsButton5" onclick = "KingsChange5()"> Next </button>
+</div>
+  <div id="14KingsChart3">
+  <div id="14Kings3" class="KingsCharts2"></div>
+  <p class="highcharts-description">
+      This chart shows where the Kings ranked in several categories during the 2013-14 regular season. The Kings, much like the 2011-12 team, struggled to put pucks in the net both at five on five and on the power play. But defensively, the Kings were solid, even though Quick didn't have his best season. The special teams weren't great, but the Kings as a team were so good at five on five that it was enough to make up for any shortcomings.
+  </p>
+  <button id="KingsButton6" onclick = "KingsChange6()"> Next </button>
+</div>
+</div>
+
+<div id="Hawks2015" class="ChampsCharts">
+  <h2> 2014-15 Chicago Blackhawks </h2>
+  <p> The pattern of alternating Stanley Cup wins between the Kings and the Blackhawks continued in 2015. Chicago, once again led by Patrick Kane, Jonathan Toews, Duncan Keith and Corey Crawford, entered the postseason as the third seed in the Central Division after going 48-28-6 (102 points). </p>
+  <p> The Blackhawks, despite being on the road to start the series, were favorites against the Nashville Predators because of the recent championships and the amount of talent they still had. But the series didn't start the way Chicago wanted it to. Crawford gave up three goals in the first period, and head coach Joel Quenneville opted to replace him with backup goaltender Scott Darling to start the second period. The Blackhawks scored three unanswered goals in the second period, Darling made 42 saves and Chicago won in double overtime on a goal scored by Keith. </p>
+  <p> Crawford made it through Game 2 without being pulled, but he still gave up six goals in a 6-2 loss. Darling started Game 3 in goal, and the Blackhawks earned a 4-2 win to take the lead in the series. Chicago won Game 4 in triple overtime with Darling as its goaltender but lost Game 5 by a score of 5-2. After Darling allowed three goals in the first period, Crawford was back in goal. Keith scored a goal late in the third period to put the Blackhawks ahead 4-3 that stood as the series-winning goal. </p>
+  <p> The Blackhawks were heavy favorites against the Minnesota Wild, who upset the St. Louis Blues in the previous round. Chicago's offense was on full display, as the Blackhawks swept the Wild and scored four goals in three of the four games. Crawford was back as the team's starting goaltender, and Minnesota scored just eight goals in four games. Chicago won three one-goal games in the series. In Game 4, the Blackhawks snagged a 4-0 lead and held on for the 4-3 win to complete the sweep. </p>
+  <p> Chicago was once again in the Western Conference Finals, though this time it would play the Anaheim Ducks instead of the Kings. The Ducks took Game 1 with an easy 4-1 win, but Game 2 dragged into overtime. Chicago finally won the game late in triple overtime with a game-winner from Marcus Kruger to tie the series. The next three games were all decided by one goal, including two that went into overtime. The Ducks took Game 3 2-1, then Antoine Vermette's double-overtime winner in Game 4 tied the series again and then the Ducks won Game 5 in overtime 5-4 to take a commanding 3-2 series lead. </p>
+  <p> The Blackhawks forced Game 7 with a 5-2 win in Game 6. Three of Chicago's goals came in the second period, but Anaheim whittled the lead down to one in the third period. Andrew Shaw scored late in the period to double the Blackhawks' lead and added an empty-net goal to seal the game. </p>
+  <p> In Game 7, Chicago scored four unanswered goals in the first period as Chicago won 5-3 to advance to the Stanley Cup Finals once again. </p>
+  <p> Chicago faced the Tampa Bay Lightning, who won it all in 2004, in the Stanley Cup Finals that year. The two teams split the first two games of the series in Tampa. The Lightning won Game 3 by a score of 3-2 after a goal late in the third period to take a 2-1 lead in both the game and the series. </p>
+  <p> However, Tampa Bay goaltender Ben Bishop was injured throughout the series and couldn't play, so the Lightning had to start Andrei Vasilevskiy in Game 4. The rookie goaltender had previously relieved the injured Bishop in Game 2, when he became the first goaltender in more than 20 years to win game in the finals in relief. But in Game 4, he only gave up two goals, but that would be enough for Chicago to win 2-1. </p>
+  <p> Bishop was back for the rest of the series, but the Blackhawks made it three wins in a row with another 2-1 win in Game 5. Crawford made 31 saves, and Vermette scored another game-winning goal in the third period, so the Stanley Cup was in United Center for Game 6. There was no scoring in Game 6 for nearly two periods until Duncan Keith scored late in the second period to take the lead. Kane added another late in the third, and Crawford earned a shutout with only 25 saves as Chicago won its third Stanley Cup of the decade. </p>
+  <p> Keith won the Conn Smythe Trophy as the MVP of the playoffs. The Blackhawks had a different player win the Conn Smythe Trophy all three years that they won the Stanley Cup. Kane led the team in points with 23 in 23 games with Toews and Keith both at 21. </p>
+  <div id="15HawksChart1">
+  <div id="15Hawks1" class="HawksCharts3"></div>
+      <p class="highcharts-description">
+        This graph shows the 2014-15 Blackhawks sorted by the number of points each player produced in the regular season. This also only shows players who played in at least 30 games for the Blackhawks in the regular season. For the first time during the Blackhawks' dynasty, it was Jonathan Toews, not Patrick Kane, that led the team in points. Duncan Keith once again led all Chicago defensemen in points. </p>
+        <button id="HawksButton7" onclick="HawksChange4()"> Next </button>
+    </div>
+  <div id="15HawksChart2">
+  <div id="15Hawks2" class="HawksCharts3"></div>
+      <p class="highcharts-description">
+          This chart shows the game-by-game results for the Blackhawks in the postseason. Positive goal margins mean that the Blackhawks won, while the negative goal margins are Chicago losses.
+      </p>
+      <button id="HawksButton8" onclick="HawksChange5()"> Next </button>
+</div>
+  <div id="15HawksChart3">
+  <div id="15Hawks3" class="HawksCharts3"></div>
+  <p class="highcharts-description">
+      This chart shows where the Blackhawks ranked in a few categories compared to the rest of the league. These Blackhawks were a little different because they weren't as dominant when it came to scoring goals. Chicago wasn't great at producing goals at five on five or on the power play. However, strong underlying numbers and a strong season from netminder Corey Crawford kept them afloat in the regular season.
+  </p>
+  <button id="HawksButton9" onclick="HawksChange6()"> Next </button>
+</div>
+</div>
+
+<div id="Penguins2016">
+  <h2> 2015-16 Pittsburgh Penguins </h2>
+  <p> Similar to the 2012 Kings and Pittsburgh's 2009 championship team, the 2015-16 Penguins fired their head coach in the middle of the season and won the Stanley Cup in the same year. Mike Johnston, who was in his second season as head coach, was fired on December 12th when the Penguins' record was just 15-10-3. The team had elite talent across the lineup and made waves before the season when it acquired superstar winger Phil Kessel via a trade with the Toronto Maple Leafs. </p>
+  <p> Needing to shake things up, general manager Jim Rutherford hired Mike Sullivan, head coach of Pittsburgh's AHL minor-league affiliate, to replace Johnston. The move didn't pan out at first, as the Penguins continued to slide with four straight losses. But from January onward, the Penguins were one of the best teams in the league. Pittsburgh went 30-11-4 in its last 45 games, only the Anaheim Ducks had more points in that stretch. The Penguins ended the season on a 16-5-0 run and finished second in the Metropolitan Division. </p>
+  <p> Pittsburgh faced the New York Rangers, who had eliminated the Penguins in the playoffs the previous two seasons. The other problem that the Penguins had was that they didn't have a healthy goaltender. Starter Marc-Andre Fleury was injured with a concussion, and rookie backup Matt Murray, who had played well down the stretch, was injured in the last game of the season. That meant that third-string netminder Jeff Zatkoff received the start for Game 1. He turned aside 35 shots in a 5-2 win where Pittsburgh forward Patric Hornqvist recorded a hat trick. However, Zatkoff struggled in a 4-2 loss to tie the series at one. </p>
+  <p> For Game 3, Murray was in goal, and he only faced 17 shots the entire game. The Penguins won 3-1 and then took Game 4 in a 5-0 blowout. Murray earned his first playoff shutout and Pittsburgh forward Evgeni Malkin scored twice. In Game 5, the two teams were tied at two after one period. But the Penguins exploded in the second period for four goals to eventually win 6-3 and eliminate the Rangers. The Penguins' speed and explosive offense overpowered the Rangers throughout the series, as the Penguins scored at least five goals three times in the series. </p>
+  <p> The second round featured the Penguins, led by 2005 No. 1 overall pick Sidney Crosby, going up against the Washington Capitals, led by 2004 No. 1 overall pick Alexander Ovechkin, in a much-anticipated series. They hadn't faced each other in a playoff series since 2009, and the hockey world was buzzing about them facing off again. </p>
+  <p> In Game 1, T.J. Oshie capped off a hat trick with the game-winning goal in overtime, and Capitals goaltender Braden Holtby outdueled Murray in a 4-3 Capitals win. Pittsburgh held on for a 2-1 win in Game 2 to tie the series and send it back to Pittsburgh. That was the first of three wins in a row for the Penguins, who took both games in Pittsburgh with a pair of 3-2 wins to take a stranglehold on the series. Hornqvist scored the overtime winner in Game 4, and Murray made 81 saves on 85 shots between the two games. </p>
+  <p> Washington held off elimination in Game 5 with a 3-1 win. The Capitals scored three goals on just 19 shots in the game, setting up another do-or-die game in Pittsburgh. The Penguins looked like they could cruise to victory after taking a 3-0 lead in the second period, but the Capitals managed to tie the game and send it to overtime. Penguins forward Nick Bonino scored one of the most memorable goals in franchise history when he scored on a rebound to win the game for the Penguins and advance them to the Eastern Conference Finals to face the Tampa Bay Lightning. </p>
+  <p> Once again, the Penguins lost the first game of the series, this time by a score of 3-1. Game 1 was also the beginning of the many goaltender changes in this series. Tampa Bay starter Ben Bishop left Game 1 with an injury and didn't make another appearance in the series. Against backup goaltender Andrei Vasilevskiy, the Penguins evened the series on Crosby's overtime winner. Pittsburgh took the lead in the series in Game 3 with a 4-2 win, but Tampa tied it again after a 4-3 win in Game 4. </p>
+  <p> Murray was pulled in the middle of Game 4 after allowing four goals on 30 shots. Sullivan opted to start Fleury for Game 5, but he struggled as well, giving up four goals - including the game-winning goal in overtime - on 25 shots. With the Penguins needing two wins in a row to keep their season alive, Sullivan put Murray back in goal, and it paid off. Murray stopped 29 shots, and five different Penguins scored in a 5-2 win in Tampa, setting up Game 7 in Pittsburgh. </p>
+  <p> In Game 7, the game was scoreless until early in the second period when Pittsburgh forward Bryan Rust snapped a shot past Vasilevskiy. The Lightning managed to tie the game later in the period, but Rust put the Penguins back in the lead with another goal just 30 seconds later. The Lightning later had a potential game-tying goal overturned for offsides and couldn't score after that. The Penguins held on for a 2-1 win and advanced to the Stanley Cup Finals for the first time since 2009. </p>
+  <p> The Penguins met the San Jose Sharks, who were making their first finals appearance in franchise history, to decide the winner of the Stanley Cup. Pittsburgh dominated Game 1 but struggled to beat San Jose goalie Martin Jones, who made 38 saves in the game. Tied at two late in the third period, Bonino finally beat Jones for the game-winning goal. Pittsburgh took Game 2 as well on an overtime goal scored by forward Conor Sheary. San Jose got back in the series with a 3-2 win in overtime, but the Penguins rolled to a 3-1 win and a 3-1 lead in the series. </p>
+  <p> The Sharks managed to prolong the series with a 4-2 win, thanks to 44 saves from Jones. But the Penguins were just too much, and a second-period goal from Kris Letang put the Pens up 2-1 in Game 6. The Sharks barely managed to put a shot on goal, let alone score in the third period, and the Penguins won 3-1 to win their fourth Stanley Cup in franchise history. Crosby won the Conn Smythe Trophy, while Kessel led the team in goals (10) and points (22).
+
+  <div id ="16PenguinsChart1">
+  <div id="16Penguins1" class="PenguinsCharts1"></div>
+      <p class="highcharts-description">
+          This graph shows the scoring distribution of the 2015-16 Pittsburgh Penguins. Offensively, Sidney Crosby was not only the best on the team, he was one of the best in the league. After a slow start where many critics said that Crosby's best years were over, Crosby silenced any doubts about his play. Evgeni Malkin only had 58 points, but he also played in 58 games due to injury. The Penguins were the only team with two players who played at least 25 games and had over a point per game.
+      </p>
+      <button id="PenguinsButton1" onclick = "PenguinsChange1()"> Next </button>
+  </div>
+  <div id="16PenguinsChart2">
+  <div id="16Penguins2" class="PenguinsCharts1"></div>
+      <p class="highcharts-description">
+          This chart shows the playoff results for the Penguins in 2016 in each series. Positive goal margins are wins for the Penguins, negative goal margins are losses.
+      </p>
+      <button id="PenguinsButton2" onclick = "PenguinsChange2()"> Next </button>
+  </div>
+  <div id="16PenguinsChart3">
+  <div id="16Penguins3" class="PenguinsCharts1"></div>
+  <p class="highcharts-description">
+      This chart shows where the Penguins were ranked in several statistical categories. Despite a slow start under Mike Johnston, the Penguins were much better in all facets of the game under Mike Sullivan. Once the Penguins called up goaltender Matt Murray to back up starter Marc-Andre Fleury, Pittsburgh combined a strong offense and elite underlying numbers with one of the best goaltending tandems in the league.
+  </p>
+  <button id="PenguinsButton3" onclick = "PenguinsChange3()"> Next </button>
+</div>
+</div>
+
+
+<div id="Penguins2017" class = "ChampsCharts">
+  <h2> 2016-17 Pittsburgh Penguins </h2>
+  <p> The Penguins entered the 2016-17 season with a very good shot at repeating as Stanley Cup champions. They returned all of their main contributors from the previous season - like Sidney Crosby, Evgeni Malkin, Kris Letang, Phil Kessel and Nick Bonino - and had plenty of depth. Additionally, some of the young players called up during the 2015-16 season, like Bryan Rust and Conor Sheary, were now a year older. And to top it off, they still had a solid goaltender in Marc-Andre Fleury and the promising Matt Murray who led them to the championship the season before. </p>
+  <p> For the first time since the 2005-06 season, Fleury spent an entire season with the Penguins and wasn't the starting goaltender. Murray was the team's starter in net, while Fleury had just 34 starts. Fleury didn't adjust to the backup role well, and he struggled throughout the season. His .909 save percentage was his lowest since 2008-09, and his goals-against-average was over 3.00 for the first time since 2005-06. </p>
+  <p> Goaltending debates aside, however, the 2016-17 Penguins were just as strong as the 2015-16 Penguins after that team hired Mike Sullivan. The Penguins' offense led the league in goals, and no team other than the Penguins had more than two players score at least 70 points (Crosby, Malkin, Kessel). The defense was a little leaky and lacked depth beyond Letang, Brian Dumoulin and Justin Schultz, but the offense and Murray were enough to make up for any mistakes. Crosby also led the league in goals with 44. </p>
+  <p> With a full season of Sullivan behind the bench and Murray in goal, Pittsburgh ended the regular season with a 50-21-11 record and 111 points, a seven-point improvement from the previous season. That put the Penguins in second place in the Metropolitan Division and set up a matchup in the first round of the playoffs against the upstart Columbus Blue Jackets, who were making their first playoff appearance since 2014. </p>
+  <p> But the Penguins' biggest problem happened before the series even started. First, Letang was ruled out for the entire postseason with an injury. Then, Murray injured himself in pregame warmups just minutes before Game 1, forcing Fleury, who had a history of underperforming in the playoffs, into action. However, in Game 1, Fleury was fantastic, stopping 31 of 32 shots in a 3-1 win. </p>
+  <p> Pittsburgh took Game 2 as well in convincing in fashion with a 4-1 victory. In a pivotal Game 3, the Blue Jackets scored just 11 seconds into the game and took a 3-1 lead heading into the first intermission. The Penguins came back to tie the game and then take the lead, only for Columbus to tie it at four late in the third. In overtime, Crosby made a few moves behind the net and fed a pass in front to rookie forward Jake Guentzel, who scored the game-winner. Guentzel's overtime winner was also his third of the game. The Penguins dropped Game 4, but they advanced to the next round with a 5-2 win. </p>
+  <p> In the second round, the Penguins had another rematch with the Capitals. With Fleury still in goal, the Penguins stole the first two games in DC by a combined score of 9-4. The Capitals then won Game 3 in overtime despite a late Penguins comeback in the third period. Crosby was hurt early in Game 3 and missed Game 4. But the Penguins' depth came through, and Pittsburgh held on for a 3-2 win and a 3-1 series lead. </p>
+  <p> But the Capitals came back in the third period of Game 5 to win and force a Game 6. Washington blew out the Penguins in Game 6 to tie the series and force Game 7. The Penguins saved their best games for last, though, and Fleury was perfect in Game 7. The veteran netminder made 29 saves and Rust scored the series-winning goal in the second period in a 2-0 shutout win to survive and move on. </p>
+  <p> The Penguins were thoroughly outplayed for most of this series, as the Capitals outshot the Penguins in six of the seven games. Fleury, who made at least 30 saves in four of the seven games, and some opportunistic offense kept the Penguins alive. </p>
+  <p> Pittsburgh was a heavy favorite in the Eastern Conference Finals against the Ottawa Senators. However, the Senators took two of the first three games to put the Penguins on notice. Ottawa outscored Pittsburgh 7-3 through the first three games. After the 5-1 loss in Game 3 where Fleury gave up four goals on nine shots, Sullivan benched Fleury in favor of Murray. The Penguins won the next two games by a combined score of 10-2 to take a 3-2 series lead. They couldn't finish off the Senators in Game 6, forcing another Game 7. </p>
+  <p> Forward Chris Kunitz scored midway through the second period for the game's first goal, but Mark Stone responded for Ottawa just 20 seconds later to tie the game again. Schultz scored on the power play for the Penguins to put them back in the lead, but Ottawa scored again late in the third period to force overtime. The game then dragged into double overtime. Just over five minutes into the second overtime period, Crosby fed the puck to Kunitz, whose knuckling shot fooled Ottawa goalie Craig Anderson for the series-winning goal that also advanced the Penguins to the Stanley Cup Finals once again to face the Nashville Predators. </p>
+  <p> Similar to the 2011 Finals, the series was heavily dependent on who the team was. Through the first five games, the home team was undefeated. Despite generating just 11 shots against Nashville goaltender Pekka Rinne and blowing a 3-0 lead, the Penguins held on for a 5-3 win. The Penguins' offense exploded early in the second period of Game 2 for three goals in roughly three-and-a-half minutes in a decisive 4-1 win. </p>
+  <p> But when the series was in the rowdy Bridgestone Arena in Nashville, the Penguins collapsed. Pittsburgh was outscored 9-2 as the Predators tied the series. Back in Pittsburgh, the Penguins lit up Rinne early, scoring three goals on nine shots before Rinne was pulled. The Pens added three more in a 6-0 blowout. </p>
+  <p> With the Stanley Cup in the building, the Penguins needed to find a way to win in Nashville. The good news for Pittsburgh was that, after a controversial early whistle disallowed a Nashville goal, the Penguins didn't let the Predators score. The bad news was that the Penguins couldn't score, either. Finally, with just under two minutes to go, a Pittsburgh shot went wide, and Patric Hornqvist, standing behind the net, banked it off the back of Rinne and into the net. The goal stood as the game-winner, and an empty net goal after it meant that the Penguins were the first team to win back-to-back Stanley Cups since the Detroit Red Wings did it in 1997 and 1998. </p>
+  <p> Crosby was named playoffs MVP by winning the Conn Smythe Trophy, becoming the first player to win the award back-to-back years since Pittsburgh's Mario Lemieux in 1991 and 1992. The 2017 championship was also the fifth in franchise history. Crosby was second on the team in points in the postseason with 27. Malkin had 28, while Guentzel led all teams with 13 goals.</p>
+
+  <div id ="17PenguinsChart1">
+  <div id="17Penguins1" class="PenguinsCharts2"></div>
+      <p class="highcharts-description">
+          This graph shows the scoring distribution of the 2016-17 Pittsburgh Penguins in the regular season. Sidney Crosby once again led the team in points and led the league in goals. Conor Sheary had a breakout year for the Penguins in just his second season, and Justin Schultz led all Pittsburgh defensemen in points, though Letang had more points per game.
+      </p>
+      <button id="PenguinsButton4" onclick = "PenguinsChange4()"> Next </button>
+  </div>
+  <div id="17PenguinsChart2">
+  <div id="17Penguins2" class="PenguinsCharts2"></div>
+      <p class="highcharts-description">
+          This chart shows game-by-game results for the Penguins throughout the 2017 postseason. Positive goal margins are wins for the Penguins, negative goal margins are losses.
+  </p>
+  <button id="PenguinsButton5" onclick = "PenguinsChange5()"> Next </button>
+</div>
+  <div id="17PenguinsChart3">
+  <div id="17Penguins3" class="PenguinsCharts2"></div>
+  <p class="highcharts-description">
+      This chart displays where the Penguins ranked compared to the rest of the league in a handful of statistics. This Penguins team wasn't as dominant at five on five as the 2016 team, but it also had consistent goal-scoring throughout the season. This team was also significantly better on the power play, though the penalty kill was worse. Though the combination of Marc-Andre Fleury and Matt Murray in goal wasn't as phenomenal as many thought before the season, the Penguins still received good goaltending all season long.
+  </p>
+  <button id="PenguinsButton6" onclick = "PenguinsChange6()"> Next </button>
+</div>
+</div>
+
+
+<div id="Capitals2018" class = "ChampsCharts">
+  <h2> 2017-18 Washington Capitals </h2>
+  <p> The Washington Capitals had always been underachievers. The Capitals had made the postseason 27 times ahead of the 2017-18 season and never won the Stanley Cup. Since they drafted superstar forward Alexander Ovechkin, the Capitals had won the President's Trophy three times and won their division seven times, but Washington never advanced past the second round of the playoffs. </p>
+  <p> This wasn't supposed to be the season that the Caps were finally going to win it all, either. Up against the salary cap, the team had lost several pieces via trade or free agency, like forwards Justin Williams and Marcus Johansson and defenseman Kevin Shattenkirk. Additionally, Washington also lost defenseman Nate Schmidt to the Vegas Golden Knights in the expansion draft. </p>
+  <p> But while the Caps lacked depth, they still had plenty of star power. The combination of Ovechkin, forwards Nicklas Backstrom and T.J. Oshie and defenseman John Carlson continued to be lethal. The Capitals edged the Penguins by five points to win the division at 49-26-7 (105 points), creating a matchup with the Columbus Blue Jackets. </p>
+  <p> Washington goaltender Braden Holtby had been a solid starter for years for the Capitals, but he struggled during the regular season. As a result, coach Barry Trotz decided to start backup Philipp Grubauer instead for the playoffs. </p>
+  <p> The Capitals didn't start the playoffs the way they wanted to. Grubauer didn't play well in goal, and the Blue Jackets came back from two-goal deficits in each of the first two games before winning in overtime. Facing a 2-0 deficit and needing likely at least one win on the road, it looked like another typical Capitals playoff collapse was in order. Trotz put Holtby back in as the starter for Game 3, where the Capitals landed a monumnetal 3-2 win in double overtime on a game-winner by Lars Eller. Washington then tied the series with a dominant 4-1 win in Game 4. </p>
+  <p> Back in the nation's capital, Backstrom tallied a goal in overtime to give the Capitals a 3-2 lead in the series. Washington then finished off the Blue Jackets in Columbus 4-3. In the four games that Holtby started, the Blue Jackets only scored nine goals. </p>
+  <p> The Capitals faced a familiar foe in the second round: the Pittsburgh Penguins. Pittsburgh had eliminated the Capitals the previous two seasons, and all of the Penguins' championships came after beating Washington in the playoffs. But it was the Capitals who took a 2-1 lead in the series after two straight wins. </p>
+  <p> The Penguins managed to win Game 4 to tie the series and set up a pivotal Game 5. In the third period, tied at two, forwards Evgeny Kutznetsov and Jakub Vrana each scored a goal to put the Capitals in the lead. Washington added a couple of empty-net goals to seal the deal. In Game 6, Kuznetsov scored on a breakaway in overtime to finally advance past the second round in the Ovechkin era. This was the 11th time the two teams had met in the playoffs, and it was only the second time Washington emerged victorious. </p>
+  <p> Against Tampa Bay in the conference finals, the Capitals won both of the first two games in Tampa. However, Tampa Bay countered with two 4-2 victories in DC to tie the series. The Lightning then made it three wins in a row with a 3-2 win in Tampa to put the Capitals on the brink of elimination. </p>
+  <p> However, Tampa couldn't seal the deal in Game 6. Or Game 7. Braden Holtby registered back-to-back shutouts, and the Capitals survived to keep their Stanley Cup hopes alive. Washington advanced to the Stanley Cup Finals for the first time since 1994 and the second time in franchise history. </p>
+  <p> In the Stanley Cup Finals, the Capitals met the Vegas Golden Knights, the first expansion team since 1968 to advance to the finals in its first season. A wild Game 1 with 10 goals was won by Vegas, thanks to a game-winning goal from Tomas Nosek in the third period. </p>
+  <p> But from there, it was all Capitals. Late in Game 2, with the Caps clinging to a 3-2 lead, Holtby made what Capitals fans call "The Save". Holtby stretched out to rob Vegas' Alex Tuch of scoring on what seemed like an open net. Washington held on for the win, and it was the beginning of four wins in a row in the series to win the Stanley Cup for the first time in Stanley Cup history. </p>
+  <p> Ovechkin, who had 15 goals and 12 assists in the postseason, won the Conn Smythe Trophy. Kuznetsov led the team in points in the playoffs with 32 in 24 games. Holtby, after a rough regular season, had a .922 save percentage in 23 games. </p>
+  <div id ="18CapitalsChart1">
+  <div id="18Capitals1" class="CapitalsCharts"></div>
+      <p class="highcharts-description">
+          This graph shows goal, assist and point totals for every player who played at least 20 games for the 2017-18 Washington Capitals. Ovechkin led the league with 49 goals as well as the team in points. John Carlson led all NHL defensemen in points with 68.
+      </p>
+      <button id="CapitalsButton1" onclick = "CapitalsChange1()"> Next </button>
+  </div>
+  <div id="18CapitalsChart2">
+  <div id="18Capitals2" class="CapitalsCharts"></div>
+      <p class="highcharts-description">
+          This chart shows the results of every postseason game the Washington Capitals played in 2018. Positive goal margins are Capitals wins, negative goal margins are Capitals losses.
+      </p>
+      <button id="CapitalsButton2" onclick = "CapitalsChange2()"> Next </button>
+</div>
+  <div id="18CapitalsChart3">
+  <div id="18Capitals3" class="CapitalsCharts"></div>
+  <p class="highcharts-description">
+      This chart shows how the Capitals ranked in several statistics relative to the rest of the league in the 2017-18 season. The Capitals struggled at five on five for much of the season in terms of possession. The Capitals greatly benefitted from the league's third-highest shooting percentage at five on five, which made up for their inability to generate possession or limit scoring chances for the opponent. Washington was also much better down the stretch when it came to posssession and controlling shot quality, especially after acquiring defeseman Michal Kempny from the Chicago Blackhawks at the trade deadline. </p>
+  <button id="CapitalsButton3" onclick = "CapitalsChange3()"> Next </button>
+
+</div>
+</div>
+
+<div id="Blues2019" class = "ChampsCharts">
+  <h2> 2018-19 St. Louis Blues </h2>
+  <p> The St. Louis Blues had been known as underachievers practically since its inception. After losing in the Stanley Cup Finals in its first three years in the NHL, the Blues never made it back. But that wasn't for a lack of trying. St. Louis had previously made the playoffs every year from 1980 to 2004 and failed to make the finals, let alone win the Stanley Cup. </p>
+  <p> However, there was hope ahead of the 2018-19 NHL season. The Blues made headlines during the offseason for completely overhauling its roster. St. Louis traded for star two-way center Ryan O'Reilly and signed free agent forwards David Perron, Patrick Maroon and Tyler Bozak. The Blues had missed the playoffs the previous season, but these offseason moves were enough for many to consider them contenders. </p>
+  <p> Two problems arose, though: Coaching and goaltending. The Blues took care of the first problem when they fired head coach Mike Yeo and replaced him with assistant coach Craig Berube after a sluggish 7-9-3 start. The Blues continued to struggle, and that was partially because of the team's goaltending. Starter Jake Allen was having a brutal season, so they called up rookie Jordan Binnington from the AHL. </p>
+  <p> The Blues' struggles carried into January, when they were dead last in the league and seemingly out of playoff contention. But with Binnington in goal and a stacked lineup flourishing under Berube, St. Louis went on a tear. The Blues won 30 of their last 45 games to make the playoffs and finish the season third in the Central Division. </p>
+  <p> Against the Winnipeg Jets in the first round, St. Louis took the first two games of the series. The Blues were then outscored 8-4 on home ice as the Jets evened the series. St. Louis ended up advancing to the second round with a pair of 3-2 victories. In total, the Blues won four games by one goal, and three of them came in Winnipeg. </p>
+  <p> The Blues were considered favorites in the second round against the Dallas Stars, who upset the Nashville Predators in the first round. Forward Vladimir Tarasenko scored twice in Game 1 to give the Blues the win, and St. Louis won two of the first three games. Dallas responded with two straight wins to put St. Louis one game away from elimination. Dallas goaltender Ben Bishop saved 65 of 68 shots in those two games to carry Dallas to victory. The Blues forced Game 7 with a 4-1 win in Dallas. On home ice, the Blues won Game 7 in double overtime on a goal scored by Maroon. </p>
+  <p> The Blues faced the San Jose Sharks in a rematch of the 2016 Western Conference Final, which was won by San Jose in six games. The Sharks demolished the Blues 6-3 in Game 1, but the Blues tied the series with a 4-2 win. St. Louis lost Game 3 in overtime on a controversial no-call on San Jose's game-winning goal. An illegal hand pass by Sharks forward Timo Meier led to a goal that put San Jose ahead 2-1 in the series. </p>
+  <p> Badly needing a win in Game 4, Binnington carried St. Louis to a 2-1 win, making 29 saves in the process. The Blues then won the next two games to eliminate the Sharks. After the no-call on the hand pass goal in Game 3, the Blues outscored San Jose 12-2. </p>
+  <p> In a rematch of the 1970 Stanley Cup Finals, the last time the Blues played in the Finals, St. Louis played the Boston Bruins. The two teams split the first two games in Boston, with defenseman Carl Gunnarsson scoring the game-winning goal in overtime for the Blues in Game 2. The first Stanley Cup Finals game in St. Louis in 49 years didn't go as planned, with the Bruins pounding the Blues 7-2. The Blues tied the series at two in the following game with a 4-2 win where O'Reilly scored twice. </p>
+  <p> Binnington was once again the headlining act in Game 5, turning aside 38 shots. The Blues escaped with a 2-1 win and were one victory away from winning the Stanley Cup for the first time.</p>
+  <p> That win would not come in Game 6. The Bruins rolled to a 5-1 win in Game 6 to force Game 7. St. Louis scored two goals in the first period of Game 7. The second period was scoreless, but the Blues tacked on four more in the third period. The Bruins got a goal back later in the period, but it was too little, too late for Boston. Binnington made 32 saves, and the Blues were finally going to bring the Stanley Cup back to St. Louis. </p>
+  <p> O'Reilly won the Conn Smythe Trophy and, later, the Selke Trophy for being the league's best two-way forward. Forward Jaden Schwartz led the team with 12 goals in the postseason, and Tarasenko (11 goals) was the only other Blues forward with at least 10 goals. Binnington had a .914 save percentage during the playoffs. </p>
+  <div id="19BluesChart1" class = "BluesCharts">
+  <div id="19Blues1" class="BluesCharts"></div>
+      <p class="highcharts-description">
+          This graph shows the Blues' individual point totals during the 2018-19 regular season. Ryan O'Reilly led the team in points and Vladimir Tarasenko led in goals. Alex Pietrangelo led all Blues defensemen in goals, points and assists.
+      </p>
+      <button id="BluesButton1" onclick = "BluesChange1()"> Next </button>
+  </div>
+  <div id="19BluesChart2">
+  <div id="19Blues2" class="BluesCharts"></div>
+      <p class="highcharts-description">
+          These are the game-by-game results for the Blues during the 2019 NHL Playoffs. Positive goal margins are games that the Blues won, and the games with negative goal margins are ones lost by the Blues.
+      </p>
+      <button id="BluesButton2" onclick = "BluesChange2()"> Next </button>
+</div>
+  <div id="19BluesChart3">
+  <div id="19Blues3" class="BluesCharts"></div>
+  <p class="highcharts-description">
+      Despite the slow start, the Blues were a well-rounded team with few weaknesses. St. Louis had plenty of scoring depth - 13 players had double-digit goals - and were solid defensively. Once the Blues used Jordan Binnington as the starting goaltender instead of Jake Allen, who was arguably one of the league's worst starting goaltenders up to that point, the Blues' biggest weakness was gone. During the second half of the season, the Blues played like one of the best teams in the league according to their underlying numbers, and their record (30 wins in the last 45 games) showed it. </p>
+  <button id="BluesButton3" onclick = "BluesChange3()"> Next </button>
+
+</div>
+</div>
+
+
+
+
+
+
 
 
 </div>
 
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="https://code.highcharts.com/themes/dark-unica.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
