@@ -1,6 +1,7 @@
 Highcharts.chart('teamChart1', {
     chart: {
-        type: 'column'
+        type: 'column',
+        animation: false
     },
     title: {
         text: 'Regular Season Points'
@@ -417,10 +418,11 @@ Highcharts.chart('10Hawks1', {
         type: 'column'
     },
     title: {
-        text: '2009-10 Blackhawks Goals, Assists and Points'
+        text: '2009-10 Blackhawks Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
-        categories: ['Patrick Kane', 'Jonathan Toews', 'Patrick Sharp', 'Marian Hossa', 'Troy Brouwer', 'Kris Versteeg', 'Andrew Ladd', 'Dustin Byfuglien', 'Duncan Keith', 'John Madden', 'Tomas Kopecky', 'Brian Campbell', 'Colin Fraser', 'Ben Eager', 'Dave Bolland', 'Brent Seabrook', 'Cam Barker', 'Bryan Bickell', 'Niklas Hjalmarsson', 'Jordan Hendry', 'Brent Sopel']
+        categories: ['Patrick Kane', 'Duncan Keith', 'Jonathan Toews', 'Patrick Sharp', 'Marian Hossa', 'Kris Versteeg', 'Troy Brouwer', 'Andrew Ladd', 'Brian Campbell', 'Dustin Byfuglien', 'Brent Seabrook', 'John Madden', 'Tomas Kopecky', 'Colin Fraser', 'Niklas Hjalmarsson', 'Ben Eager', 'Dave Bolland', 'Cam Barker', 'Jordan Hendry', 'Brent Sopel']
     },
     yAxis: {
         min: 0,
@@ -464,10 +466,10 @@ Highcharts.chart('10Hawks1', {
     },
     series: [{
         name: 'Assists',
-        data: [58, 43, 41, 27, 18 , 24, 21, 17, 55, 13, 11, 31, 12, 9, 10, 26, 10, 1, 15, 6, 7]},
+        data: [58, 55, 43, 41, 27, 24, 18, 21, 31, 17, 26, 13, 11, 12, 15, 9, 10, 10, 6, 7]},
         {
         name: 'Goals',
-        data: [30, 25, 25, 24, 22, 20, 17, 17, 14, 10, 10, 7, 7, 7, 6, 4, 4, 3, 2, 2, 1]
+        data: [30, 14, 25, 25, 24, 20, 22, 17, 7, 17, 4, 10, 10, 7, 2, 7, 6, 4, 2, 1]
     }]
     });
     Highcharts.chart('10Hawks2', {
@@ -524,12 +526,13 @@ Highcharts.chart('10Hawks3', {
 
     title: {
         text: '2009-10 Chicago Blackhawks compared to rest of the league',
-        x: -20
+        subtitle: 'Source: Natural Stat Trick and nhl.com,'
+
 
     },
 
     pane: {
-        size: '90%'
+        size: '100%'
     },
 
     xAxis: {
@@ -617,7 +620,8 @@ Highcharts.chart('bruins1', {
         type: 'column'
     },
     title: {
-        text: '2010-11 Bruins Goals, Assists and Points'
+        text: '2010-11 Bruins Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Milan Lucic', 'David Krejci', 'Patrice Bergeron', 'Nathan Horton', 'Mark Recchi', 'Zdeno Chara', 'Michael Ryder', 'Brad Marchand', 'Dennis Seidenberg', 'Gregory Campbell', 'Blake Wheeler', 'Tyler Seguin', 'Shawn Thornton', 'Johnny Boychuk', 'Andrew Ference', 'Adam McQuaid', 'Daniel Paille', 'Steven Kampfer', 'Marc Savard', 'Tomas Kaberle', 'Rich Peverley', 'Jordan Caron', 'Mark Stuart', 'Chris Kelly', 'Matt Hunwick']
@@ -728,6 +732,7 @@ Highcharts.chart('bruins3', {
 
     title: {
         text: '2010-11 Boston Bruins compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
         x: -20
 
     },
@@ -821,7 +826,8 @@ Highcharts.chart('12Kings1', {
         type: 'column'
     },
     title: {
-        text: '2011-12 Los Angeles Kings Goals, Assists and Points'
+        text: '2011-12 Kings Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Anze Kopitar', 'Justin Williams', 'Dustin Brown', 'Mike Richards', 'Drew Doughty', 'Jack Johnson', 'Willie Mitchell', 'Jarret Stoll', 'Slava Voynov', 'Simon Gagne', 'Dustin Penner', 'Matt Greene', 'Dwight King', 'Alec Martinez', 'Kyle Clifford', 'Jeff Carter', 'Rob Scuderi', 'Brad Richardson', 'Colin Fraser', 'Trevor Lewis', 'Andrei Loktionov', 'Trent Hunter', 'Jordan Nolan', 'Ethan Moreau', 'Kevin Westgarth']
@@ -885,6 +891,7 @@ Highcharts.chart('12Kings1', {
         categories: ['Vancouver', 'St. Louis', 'Phoenix', 'New Jersey']
     },
     yAxis: {
+      tickInterval: 1,
       title: {
         text: 'Margin of victory'
         }
@@ -922,11 +929,12 @@ Highcharts.chart('12Kings3', {
     },
 
     accessibility: {
-        description: 'This chart shows where the Bruins ranked in several categories relative to the rest of the league. The further away from center the better.'
+        description: 'This chart shows where the Kings ranked in several categories relative to the rest of the league. The further away from center the better.'
     },
 
     title: {
         text: '2011-12 Kings compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
         x: -20
 
     },
@@ -1020,7 +1028,8 @@ Highcharts.chart('13Hawks1', {
         type: 'column'
     },
     title: {
-        text: '2013 Chicago Blackhawks Goals, Assists and Points'
+        text: '2013 Blackhawks Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Patrick Kane', 'Jonathan Toews', 'Marian Hossa', 'Brandon Saad', 'Duncan Keith', 'Bryan Bickell', 'Viktor Stalberg', 'Brent Seabrook', 'Patrick Sharp', 'Nick Leddy', 'Andrew Shaw', 'Dave Bolland', 'Marcus Kruger', 'Johnny Oduya', 'Michal Rozsival', 'Michael Frolik', 'Niklas Hjalmarsson', 'Daniel Carcillo', 'Sheldon Brookbank', 'Brandon Bollig']
@@ -1084,6 +1093,7 @@ Highcharts.chart('13Hawks1', {
         categories: ['Minnesota', 'Detroit', 'Los Angeles', 'Boston']
     },
     yAxis: {
+      tickInterval: 1,
       title: {
         text: 'Margin of victory'
         }
@@ -1129,6 +1139,7 @@ Highcharts.chart('13Hawks3', {
 
     title: {
         text: '2013 Chicago Blackhawks compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
         x: -20
 
     },
@@ -1222,7 +1233,8 @@ Highcharts.chart('14Kings1', {
         type: 'column'
     },
     title: {
-        text: '2013-14 Los Angeles Kings Goals, Assists and Points'
+        text: '2013-14 Kings Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Anze Kopitar', 'Jeff Carter', 'Justin Williams', 'Mike Richards', 'Drew Doughty', 'Slava Voynov', 'Dwight King', 'Tyler Toffoli', 'Dustin Brown', 'Jarret Stoll', 'Jake Muzzin', 'Alec Martinez', 'Marian Gaborik', 'Robyn Regehr', 'Willie Mitchell', 'Trevor Lewis', 'Jordan Nolan', 'Kyle Clifford', 'Tanner Pearson', 'Matt Frattin', 'Matt Greene', 'Daniel Carcillo', 'Colin Fraser']
@@ -1286,6 +1298,7 @@ Highcharts.chart('14Kings1', {
         categories: ['San Jose', 'Anaheim', 'Chicago', 'New York']
     },
     yAxis: {
+      tickInterval: 1,
       title: {
         text: 'Margin of victory'
         }
@@ -1319,49 +1332,77 @@ Highcharts.chart('14Kings1', {
 ]
 });
 Highcharts.chart('14Kings3', {
-    chart: {
-        type: 'bar'
-    },
-    title: {
-        text: 'The 2013-14 Kings Compared to the Rest of the League'
-    },
-    subtitle: {
-        text: 'Source: NHL.com and NaturalStatTrick.com'
-    },
-    xAxis: {
-        reversed: true,
-        categories: [
-        'Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'
-        ],
-        crosshair: true
-    },
-    yAxis:{
-      max:30,
-      tickInterval: 3,
-      title: {
-            text: 'Rank in league'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y} </b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Kings',
-        data: [26, 1, 2, 27, 11, 1, 2]
 
-    }]
+    chart: {
+        polar: true,
+        type: 'line'
+    },
+
+    accessibility: {
+        description: 'This chart shows where the Kings ranked in several categories relative to the rest of the league. The further away from center the better.'
+    },
+
+    title: {
+        text: '2013-14 Los Angeles Kings compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
+        x: -20
+
+    },
+
+    pane: {
+        size: '90%'
+    },
+
+    xAxis: {
+        categories: ['Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+    },
+
+    yAxis: {
+    		reversed: true,
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        tickInterval: 10,
+        max: 30,
+        min: 0
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    series: [{
+        name: 'League rank',
+        data: [26, 1, 2, 27, 11, 1, 2],
+        pointPlacement: 'on'
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                },
+                pane: {
+                    size: '70%'
+                }
+            }
+        }]
+    }
+
 });
+
 let button11 = document.getElementById("KingsShow2")
 let team5 = document.getElementById("Kings2014")
 team5.style.display = "none"
@@ -1397,7 +1438,8 @@ Highcharts.chart('15Hawks1', {
         type: 'column'
     },
     title: {
-        text: '2014-15 Chicago Blackhawks Goals, Assists and Points'
+        text: '2014-15 Blackhawks Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Jonathan Toews', 'Patrick Kane', 'Marian Hossa', 'Brandon Saad', 'Duncan Keith', 'Patrick Sharp', 'Brad Richards', 'Kris Versteeg', 'Brent Seabrook', 'Bryan Bickell', 'Andrew Shaw', 'Niklas Hjalmarsson', 'Marcus Kruger', 'David Rundblad', 'Michal Rozsival', 'Johnny Oduya', 'Ben Smith', 'Teuvo Teravainen', 'Daniel Carcillo', 'Joakim Nordstrom']
@@ -1461,6 +1503,7 @@ Highcharts.chart('15Hawks1', {
         categories: ['Nashville', 'Minnesota', 'Anaheim', 'Tampa Bay']
     },
     yAxis: {
+      tickInterval: 1,
       title: {
         text: 'Margin of victory'
         }
@@ -1494,49 +1537,77 @@ Highcharts.chart('15Hawks1', {
 ]
 });
 Highcharts.chart('15Hawks3', {
-    chart: {
-        type: 'bar'
-    },
-    title: {
-        text: 'The 2014-15 Blackhawks Compared to the Rest of the League'
-    },
-    subtitle: {
-        text: 'Source: NHL.com and NaturalStatTrick.com'
-    },
-    xAxis: {
-        reversed: true,
-        categories: [
-        'Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'
-        ],
-        crosshair: true
-    },
-    yAxis: {
-        max: 30,
-        tickInterval: 3,
-        title: {
-            text: 'Rank in league'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y} </b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Blackhawks',
-        data: [17, 2, 2, 20, 10, 2, 16]
 
-    }]
+    chart: {
+        polar: true,
+        type: 'line'
+    },
+
+    accessibility: {
+        description: 'This chart shows where the Blackhawks ranked in several categories relative to the rest of the league. The further away from center the better.'
+    },
+
+    title: {
+        text: '2014-15 Chicago Blackhawks compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
+        x: -20
+
+    },
+
+    pane: {
+        size: '90%'
+    },
+
+    xAxis: {
+        categories: ['Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+    },
+
+    yAxis: {
+    		reversed: true,
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        tickInterval: 10,
+        max: 30,
+        min: 0
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    series: [{
+        name: 'League rank',
+        data: [17, 2, 2, 20, 10, 2, 16],
+        pointPlacement: 'on'
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                },
+                pane: {
+                    size: '70%'
+                }
+            }
+        }]
+    }
+
 });
+
 let button12 = document.getElementById("BlackhawksShow3")
 let team6 = document.getElementById("Hawks2015")
 team6.style.display = "none"
@@ -1572,7 +1643,8 @@ Highcharts.chart('16Penguins1', {
         type: 'column'
     },
     title: {
-        text: '2015-16 Pittsburgh Penguins Goals, Assists and Points'
+        text: '2015-16 Penguins Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Sidney Crosby', 'Kris Letang', 'Phil Kessel', 'Evgeni Malkin', 'Patric Hornqvist', 'Chris Kunitz', 'Matt Cullen', 'Nick Bonino', 'Carl Hagelin', 'Trevor Daley', 'Olli Matta', 'David Perron', 'Brian Dumoulin', 'Tom Kuhnhackl', 'Eric Fehr', 'Beau Bennett', 'Ian Cole', 'Bryan Rust', 'Conor Sheary', 'Ben Lovejoy', 'Kevin Porter', 'Sergei Plotnikov']
@@ -1636,6 +1708,7 @@ Highcharts.chart('16Penguins1', {
         categories: ['New York', 'Washington', 'Tampa Bay', 'San Jose']
     },
     yAxis: {
+      tickInterval: 1,
       title: {
         text: 'Margin of victory'
         }
@@ -1668,58 +1741,87 @@ Highcharts.chart('16Penguins1', {
     }
 ]
 });
-Highcharts.chart('16Penguins3', {
-    chart: {
-        type: 'bar'
-    },
-    title: {
-        text: 'The 2015-16 Pittsburgh Penguins Compared to the Rest of the League'
-    },
-    subtitle: {
-        text: 'Source: NHL.com and NaturalStatTrick.com'
-    },
-    xAxis: {
-        reversed: true,
-        categories: [
-        'Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'
-        ],
-        crosshair: true
-    },
-    yAxis: {
-        max: 30,
-        tickInterval: 3,
-        title: {
-            text: 'Rank in league'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y} </b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Penguins',
-        data: [3, 6, 2, 16, 5, 2, 1]
 
-    }]
+Highcharts.chart('16Penguins3', {
+
+    chart: {
+        polar: true,
+        type: 'line'
+    },
+
+    accessibility: {
+        description: 'This chart shows where the Penguins ranked in several categories relative to the rest of the league. The further away from center the better.'
+    },
+
+    title: {
+        text: '2015-16 Pittsburgh Penguins compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
+        x: -20
+
+    },
+
+    pane: {
+        size: '90%'
+    },
+
+    xAxis: {
+        categories: ['Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+    },
+
+    yAxis: {
+    		reversed: true,
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        tickInterval: 10,
+        max: 30,
+        min: 0
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    series: [{
+        name: 'League rank',
+        data: [3, 6, 2, 16, 5, 2, 1],
+        pointPlacement: 'on'
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                },
+                pane: {
+                    size: '70%'
+                }
+            }
+        }]
+    }
+
 });
+
 let button13 = document.getElementById("PenguinsShow")
 let team7 = document.getElementById("Penguins2016")
 team7.style.display = "none"
 function PenguinsButton(){
-  if (team7.style.display == "flex"){
+  if (team7.style.display == "block"){
     team7.style.display = "none"
   }
-  else {team7.style.display = "flex"
+  else {team7.style.display = "block"
 }
 }
 let Penguins1 = document.getElementById("16PenguinsChart1")
@@ -1747,7 +1849,8 @@ Highcharts.chart('17Penguins1', {
         type: 'column'
     },
     title: {
-        text: '2016-17 Pittsburgh Penguins Goals, Assists and Points'
+        text: '2016-17 Penguins Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Sidney Crosby', 'Evgeni Malkin', 'Phil Kessel', 'Conor Sheary', 'Justin Schultz', 'Patric Hornqvist', 'Nick Bonino', 'Kris Letang', 'Jake Guentzel', 'Matt Cullen', 'Chris Kunitz', 'Bryan Rust', 'Scott Wilson', 'Ian Cole', 'Carl Hagelin', 'Trevor Daley', 'Tom Kuhnhackl', 'Brian Dumoulin', 'Eric Fehr', 'Chad Ruhwedel', 'Carter Rowney', 'Olli Maatta']
@@ -1812,7 +1915,7 @@ Highcharts.chart('17Penguins1', {
     },
     yAxis: {
       max: 8,
-      tickInterval: 2,
+      tickInterval: 1,
       title: {
         text: 'Margin of victory'
         }
@@ -1846,49 +1949,77 @@ Highcharts.chart('17Penguins1', {
 ]
 });
 Highcharts.chart('17Penguins3', {
-    chart: {
-        type: 'bar'
-    },
-    title: {
-        text: 'The 2016-17 Pittsburgh Penguins Compared to the Rest of the League'
-    },
-    subtitle: {
-        text: 'Source: NHL.com and NaturalStatTrick.com'
-    },
-    xAxis: {
-        reversed: true,
-        categories: [
-        'Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'
-        ],
-        crosshair: true
-    },
-    yAxis: {
-    		max: 30,
-        tickInterval: 3,
-        title: {
-            text: 'Rank in league'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y} </b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Penguins',
-        data: [1, 17, 10, 3, 20, 2, 5]
 
-    }]
+    chart: {
+        polar: true,
+        type: 'line'
+    },
+
+    accessibility: {
+        description: 'This chart shows where the Penguins ranked in several categories relative to the rest of the league. The further away from center the better.'
+    },
+
+    title: {
+        text: '2016-17 Pittsburgh Penguins compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
+        x: -20
+
+    },
+
+    pane: {
+        size: '90%'
+    },
+
+    xAxis: {
+        categories: ['Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+    },
+
+    yAxis: {
+    		reversed: true,
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        tickInterval: 10,
+        max: 30,
+        min: 0
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    series: [{
+        name: 'League rank',
+        data: [1, 17, 10, 3, 20, 2, 5],
+        pointPlacement: 'on'
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                },
+                pane: {
+                    size: '70%'
+                }
+            }
+        }]
+    }
+
 });
+
 let button14 = document.getElementById("PenguinsShow2")
 let team8 = document.getElementById("Penguins2017")
 team8.style.display = "none"
@@ -1924,7 +2055,8 @@ Highcharts.chart('18Capitals1', {
         type: 'column'
     },
     title: {
-        text: '2017-18 Washington Capitals Goals, Assists and Points'
+        text: '2017-18 Capitals Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Alex Ovechkin', 'Evgeny Kuznetsov', 'Nicklas Backstrom', 'John Carlson', 'T.J. Oshie', 'Lars Eller', 'Tom Wilson', 'Dmitry Orlov', 'Matt Niskanen', 'Brett Connolly', 'Jakub Vrana', 'Andre Burakovsky', 'Jay Beagle', 'Alex Chiasson', 'Chandler Stephenson', 'Devante Smith-Pelly', 'Christian Djoos', 'Madison Bowey', 'Brooks Orpik', 'Taylor Chorney', 'Michal Kempny']
@@ -1988,6 +2120,7 @@ Highcharts.chart('18Capitals1', {
         categories: ['Columbus', 'Pittsburgh', 'Tampa Bay', 'Vegas']
     },
     yAxis: {
+      tickInterval: 1,
       max: 5,
       title: {
         text: 'Margin of victory'
@@ -2022,49 +2155,77 @@ Highcharts.chart('18Capitals1', {
 ]
 });
 Highcharts.chart('18Capitals3', {
-    chart: {
-        type: 'bar'
-    },
-    title: {
-        text: 'The 2017-18 Washiington Capitals Compared to the Rest of the League'
-    },
-    subtitle: {
-        text: 'Source: NHL.com and NaturalStatTrick.com'
-    },
-    xAxis: {
-        reversed: true,
-        categories: [
-        'Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'
-        ],
-        crosshair: true
-    },
-    yAxis: {
-    		max: 30,
-        tickInterval: 3,
-        title: {
-            text: 'Rank in league'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y} </b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Capitals',
-        data: [9, 16, 17, 7, 15, 24, 26]
 
-    }]
+    chart: {
+        polar: true,
+        type: 'line'
+    },
+
+    accessibility: {
+        description: 'This chart shows where the Capitals ranked in several categories relative to the rest of the league. The further away from center the better.'
+    },
+
+    title: {
+        text: '2017-18 Washington Capitals compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
+        x: -20
+
+    },
+
+    pane: {
+        size: '90%'
+    },
+
+    xAxis: {
+        categories: ['Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+    },
+
+    yAxis: {
+    		reversed: true,
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        tickInterval: 10,
+        max: 30,
+        min: 0
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    series: [{
+        name: 'League rank',
+        data: [9, 16, 17, 7, 15, 24, 26],
+        pointPlacement: 'on'
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                },
+                pane: {
+                    size: '70%'
+                }
+            }
+        }]
+    }
+
 });
+
 let button15 = document.getElementById("CapitalsShow")
 let team9 = document.getElementById("Capitals2018")
 team9.style.display = "none"
@@ -2100,7 +2261,8 @@ Highcharts.chart('19Blues1', {
         type: 'column'
     },
     title: {
-        text: '2018-19 St. Louis Blues Goals, Assists and Points'
+        text: '2018-19 Blues Point Totals',
+        subtitle: 'Source: www.hockeyreference.com',
     },
     xAxis: {
         categories: ['Ryan O_Reilly', 'Vladimir Tarasenko', 'Brayden Schenn', 'David Perron', 'Alex Pietrangelo', 'Tyler Bozak', 'Jaden Schwartz', 'Vince Dunn', 'Robert Thomas', 'Oskar Sundqvist', 'Pat Maroon', 'Colton Parayko', 'Alex Steen', 'Ivan Barbashev', 'Zach Sanford', 'Jay Bouwmeester', 'Joel Edmundson', 'Robert Bortuzzo', 'Robby Fabbri', 'Sammy Blais']
@@ -2201,49 +2363,77 @@ Highcharts.chart('19Blues1', {
 ]
 });
 Highcharts.chart('19Blues3', {
-    chart: {
-        type: 'bar'
-    },
-    title: {
-        text: 'The 2018-19 St. Louis Blues Compared to the Rest of the League'
-    },
-    subtitle: {
-        text: 'Source: NHL.com and NaturalStatTrick.com'
-    },
-    xAxis: {
-        reversed: true,
-        categories: [
-        'Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'
-        ],
-        crosshair: true
-    },
-    yAxis: {
-    		max: 30,
-        tickInterval: 3,
-        title: {
-            text: 'Rank in league'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y} </b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: 'Blues',
-        data: [15, 5, 13, 10, 9, 10, 5]
 
-    }]
+    chart: {
+        polar: true,
+        type: 'line'
+    },
+
+    accessibility: {
+        description: 'This chart shows where the Blues ranked in several categories relative to the rest of the league. The further away from center the better.'
+    },
+
+    title: {
+        text: '2018-19 St. Louis Blues compared to rest of the league',
+        subtitle: 'Source: Natural Stat Trick and nhl.com',
+        x: -20
+
+    },
+
+    pane: {
+        size: '90%'
+    },
+
+    xAxis: {
+        categories: ['Goals scored', 'Goals allowed', 'Save percentage', 'PP%', 'PK%', 'CF%', 'xGF%'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+    },
+
+    yAxis: {
+    		reversed: true,
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        tickInterval: 10,
+        max: 30,
+        min: 0
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    series: [{
+        name: 'League rank',
+        data: [15, 5, 13, 10, 9, 10, 5],
+        pointPlacement: 'on'
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                },
+                pane: {
+                    size: '70%'
+                }
+            }
+        }]
+    }
+
 });
+
 let button16 = document.getElementById("BluesShow")
 let team10 = document.getElementById("Blues2019")
 team10.style.display = "none"
